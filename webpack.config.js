@@ -3,7 +3,7 @@ let HtmlWepackPlugin = require("html-webpack-plugin") //html模板
 let MiniCssExtractPlugin = require("mini-css-extract-plugin") //抽离css文件为link插入html中 用了这个就无须使用styleloaderle 
 let OptimizeCss = require("optimize-css-assets-webpack-plugin") //当使用插件压缩css时，原先的生产环境webpack自动压缩js的配置会失效，需要添加uglyfyjs来压缩js
 let UglifyJsPlugin = require("uglifyjs-webpack-plugin")
-
+let CleanWebpackPlugin = require("clean-webpack-plugin") //打包前清空dist目录
 
 module.exports = {
     devServer: {
@@ -48,7 +48,8 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({ //可以自动插入link标签
             filename: "main.css"
-        })
+        }),
+        new CleanWebpackPlugin("./cons") //可以让打包的文件加重先清空再打包,也可以传入数组打包前可以删除多个文件夹
     ],
     module: {
         //css loader 处理@import这种语法 
