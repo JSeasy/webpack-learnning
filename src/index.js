@@ -13,3 +13,4 @@ asd()
 var img = new Image()
 img.src = logo
 document.documentElement.appendChild(img)
+console.log(DEV)
