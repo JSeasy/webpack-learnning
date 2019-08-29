@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/b.css","webpack:///./src/a.css"],"names":[],"mappings":"AAAA;AACA;;AAEA;;AAEA;AACA;AACA,C;ACPA;AACA;AACA,C","file":"main.css","sourcesContent":["span {\r\n    color: aquamarine,\r\n\r\n}\r\n\r\ndiv {\r\n    transform: rotate(45deg)\r\n}","span {\r\n    background: red\r\n}"],"sourceRoot":""}
